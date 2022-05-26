@@ -1,5 +1,6 @@
 import {
   Box,
+  Grid,
   Icon,
   Flex,
   Text,
@@ -7,6 +8,7 @@ import {
   HStack,
   Tooltip,
   Heading,
+  GridItem,
   useColorModeValue,
 } from '@chakra-ui/react'
 import {
@@ -162,11 +164,15 @@ const Services: NextPage = () => {
       </Head>
       <Navbar locale={locale} />
       <main>
-        <Box mx={8} py={16}>
-          {cards.map(({ title, text, icons }, index) => (
-            <Card key={index} title={title} text={text} icons={icons} />
-          ))}
-        </Box>
+        <Flex mx={8} py={16} margin={'auto'} maxW={'max-content'}>
+          <Grid gap={2} templateColumns={'repeat(2, 1fr)'}>
+            {cards.map(({ title, text, icons }, index) => (
+              <GridItem key={index}>
+                <Card title={title} text={text} icons={icons} />
+              </GridItem>
+            ))}
+          </Grid>
+        </Flex>
       </main>
     </div>
   )
