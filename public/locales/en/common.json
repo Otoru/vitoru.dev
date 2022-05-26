@@ -1,0 +1,21 @@
+{
+  "home": {
+    "label": "Home",
+    "description": "Return to home page"
+  },
+  "services": {
+    "label": "Services",
+    "description": "Learn how we can help you"
+  },
+  "about": {
+    "label": "About us",
+    "description": "Get to know us a bit more"
+  },
+  "contact": {
+    "label": "Contact",
+    "description": "Let's talk"
+  },
+  "email": "contact@vitoru.dev",
+  "portuguese": "Portuguese",
+  "english": "English"
+}

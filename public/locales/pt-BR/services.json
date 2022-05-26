@@ -1,0 +1,27 @@
+{
+  "head": "Vitoru · Serviços",
+  "cards": [
+    {
+      "title": "Aplicações WEB",
+      "text": "Uma Aplicação Web é a forma mais fácil de criar um ponto de encontro entre seu negócio e seus clientes. A web permite que você entregue valor de forma rápida, sem instalação e em qualquer dispositivo que o usuário consuma seu conteúdo.",
+      "icons": [
+        "React",
+        "Next",
+        "Javascript",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "title": "Aplicações WEB",
+      "text": "Uma Aplicação Web é a forma mais fácil de criar um ponto de encontro entre seu negócio e seus clientes. A web permite que você entregue valor de forma rápida, sem instalação e em qualquer dispositivo que o usuário consuma seu conteúdo.",
+      "icons": [
+        "React",
+        "Next",
+        "Javascript",
+        "Python",
+        "AWS"
+      ]
+    }
+  ]
+}
