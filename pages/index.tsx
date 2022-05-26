@@ -52,9 +52,14 @@ const Home: NextPage = () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const props = locale
-    ? await serverSideTranslations(locale, ['index', 'common'])
-    : {}
+  let props = {}
+
+  if (locale) {
+    const namespaces = ['index', 'common']
+    const translations = await serverSideTranslations(locale, namespaces)
+    props = { ...props, ...translations }
+  }
+
   return { props }
 }
 
