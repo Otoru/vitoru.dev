@@ -1,5 +1,4 @@
 import {
-  Box,
   Grid,
   Icon,
   Flex,
@@ -8,13 +7,16 @@ import {
   HStack,
   Tooltip,
   Heading,
-  GridItem,
   useColorModeValue,
+  Container,
+  GridItem,
+  Spacer,
 } from '@chakra-ui/react'
 import {
   FaAws as AwsIcon,
   FaGitAlt as GitIcon,
   FaReact as ReactIcon,
+  FaCentos as CentosIcon,
   FaGithub as GithubIcon,
   FaPython as PythonIcon,
   FaDocker as DockerIcon,
@@ -23,14 +25,17 @@ import {
 } from 'react-icons/fa'
 import {
   SiGnubash as BashIcon,
+  SiDebian as DebianIcon,
+  SiUbuntu as UbuntuIcon,
   SiGitlab as GitlabIcon,
+  SiArchlinux as ArchIcon,
   SiNextdotjs as NextIcon,
   SiAnsible as AnsibleIcon,
   SiTerraform as TerraformIcon,
+  SiKubernetes as KubernetesIcon,
 } from 'react-icons/si'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { IoLogoJavascript as JavascriptIcon } from 'react-icons/io'
-import { GrGolang as GolangIcon } from 'react-icons/gr'
 import type { GetStaticProps, NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
@@ -41,7 +46,7 @@ import { Navbar } from 'components'
 
 interface CardProps {
   title: string
-  text: string
+  text: Array<string>
   icons: Array<string>
 }
 
@@ -82,13 +87,28 @@ const tagMaker = ({
       return { color: 'gray', icon: GithubIcon }
     }
     case 'Bash': {
-      return { color: 'gray', icon: BashIcon }
+      return { color: 'pink', icon: BashIcon }
     }
     case 'Terraform': {
       return { color: 'purple', icon: TerraformIcon }
     }
     case 'Gitlab': {
       return { color: 'orange', icon: GitlabIcon }
+    }
+    case 'Kubernetes': {
+      return { color: 'blue', icon: KubernetesIcon }
+    }
+    case 'Ubuntu': {
+      return { color: 'orange', icon: UbuntuIcon }
+    }
+    case 'Debian': {
+      return { color: 'pink', icon: DebianIcon }
+    }
+    case 'Centos': {
+      return { color: 'green', icon: CentosIcon }
+    }
+    case 'Arch': {
+      return { color: 'blue', icon: ArchIcon }
     }
     default: {
       return { color: 'yellow', icon: QuestionIcon }
@@ -107,7 +127,7 @@ const Tag: React.FC<TagProps> = ({ label, color, icon }) => {
   return (
     <Tooltip label={label}>
       <Flex bg={background} borderRadius={'full'}>
-        <Icon color={'gray.200'} m={2} as={icon} boxSize={4} />
+        <Icon color={'gray.100'} m={2} as={icon} boxSize={4} />
       </Flex>
     </Tooltip>
   )
@@ -115,12 +135,12 @@ const Tag: React.FC<TagProps> = ({ label, color, icon }) => {
 
 const Card: React.FC<CardProps> = ({ title, icons, text }) => {
   const background = useColorModeValue('gray.100', 'gray.900')
-  const border = useColorModeValue('blue.600', 'blue.200')
+  const base = useColorModeValue('blue.100', 'blue.900')
 
   return (
-    <Box
-      m={2}
-      maxW={'320px'}
+    <Stack
+      w={'100%'}
+      h={'100%'}
       rounded={'md'}
       bg={background}
       shadow={'base'}
@@ -130,24 +150,24 @@ const Card: React.FC<CardProps> = ({ title, icons, text }) => {
         transition: '.1s',
       }}
     >
-      <Box px={4} py={4}>
-        <Heading fontWeight={'900'} size={'md'}>
+      <Stack p={6} paddingBottom={4}>
+        <Heading fontWeight={'900'} size={'md'} paddingBottom={2}>
           {title}
-          <Icon as={GolangIcon} />
         </Heading>
-        <Text fontWeight={'300'} marginTop={2}>
-          {text}
-        </Text>
-      </Box>
-      <Stack p={4} paddingTop={2} borderColor={border} borderTopWidth={2}>
-        <HStack paddingTop={2}>
-          {icons.map((tag, index) => {
-            const { icon, color } = tagMaker({ tag })
-            return <Tag key={index} label={tag} color={color} icon={icon} />
-          })}
-        </HStack>
+        {text.map((content, index) => (
+          <Text key={index} fontWeight={'300'}>
+            {content}
+          </Text>
+        ))}
       </Stack>
-    </Box>
+      <Spacer />
+      <HStack bg={base} px={6} py={4}>
+        {icons.map((tag, index) => {
+          const { icon, color } = tagMaker({ tag })
+          return <Tag key={index} label={tag} color={color} icon={icon} />
+        })}
+      </HStack>
+    </Stack>
   )
 }
 
@@ -164,24 +184,33 @@ const Services: NextPage = () => {
       </Head>
       <Navbar locale={locale} />
       <main>
-        <Flex mx={8} py={16} margin={'auto'} maxW={'max-content'}>
-          <Grid gap={2} templateColumns={'repeat(2, 1fr)'}>
+        <Container maxW={['container.sm', 'container.md']} py={4}>
+          <Grid
+            gap={[4, 6]}
+            m={'auto'}
+            templateColumns={'repeat(auto-fit, minmax(20rem, 1fr));'}
+          >
             {cards.map(({ title, text, icons }, index) => (
               <GridItem key={index}>
                 <Card title={title} text={text} icons={icons} />
               </GridItem>
             ))}
           </Grid>
-        </Flex>
+        </Container>
       </main>
     </div>
   )
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const props = locale
-    ? await serverSideTranslations(locale, ['services', 'common'])
-    : {}
+  let props = {}
+
+  if (locale) {
+    const namespaces = ['services', 'common']
+    const translations = await serverSideTranslations(locale, namespaces)
+    props = { ...props, ...translations }
+  }
+
   return { props }
 }
 
