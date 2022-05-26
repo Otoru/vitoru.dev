@@ -13,14 +13,11 @@
       ]
     },
     {
-      "title": "Web Apps",
-      "text": "A Web Application is the easiest way to create a meeting point between your business and your customers. The internet allows you to deliver value immediately, without installation and on whatever device the user consumes your content.",
+      "title": "Process automation",
+      "text": "Using technology to make operational a process that was previously performed manually can give your company a lot of agility. We help you do this using the integration tools best suited for your business.",
       "icons": [
-        "React",
-        "Next",
-        "Javascript",
         "Python",
-        "AWS"
+        "Bash"
       ]
     },
     {

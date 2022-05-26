@@ -13,36 +13,33 @@
       ]
     },
     {
-      "title": "Aplicações WEB",
-      "text": "Uma Aplicação Web é a forma mais fácil de criar um ponto de encontro entre seu negócio e seus clientes. A web permite que você entregue valor de forma rápida, sem instalação e em qualquer dispositivo que o usuário consuma seu conteúdo.",
-      "icons": [
-        "React",
-        "Next",
-        "Javascript",
-        "Python",
-        "AWS"
-      ]
-    },
-    {
-      "title": "Aplicações WEB",
-      "text": "Uma Aplicação Web é a forma mais fácil de criar um ponto de encontro entre seu negócio e seus clientes. A web permite que você entregue valor de forma rápida, sem instalação e em qualquer dispositivo que o usuário consuma seu conteúdo.",
-      "icons": [
-        "React",
-        "Next",
-        "Javascript",
-        "Python",
-        "AWS"
-      ]
-    },
-    {
       "title": "Automação de processos",
-      "text": "Uma Aplicação Web é a forma mais fácil de criar um ponto de encontro entre seu negócio e seus clientes. A web permite que você entregue valor de forma rápida, sem instalação e em qualquer dispositivo que o usuário consuma seu conteúdo.",
+      "text": "Usar tecnologia para tornar operacional um processo que antes era executado manualmente pode dar muita agilidade a sua empresa. Ajudamos você a fazer isso usando as ferramentas de integração mais adequadas para seu negócio.",
       "icons": [
         "Python",
-        "Ansible",
-        "Git",
-        "Bash",
-        "Terraform"
+        "Bash"
+      ]
+    },
+    {
+      "title": "Aplicações WEB",
+      "text": "Uma Aplicação Web é a forma mais fácil de criar um ponto de encontro entre seu negócio e seus clientes. A web permite que você entregue valor de forma rápida, sem instalação e em qualquer dispositivo que o usuário consuma seu conteúdo.",
+      "icons": [
+        "React",
+        "Next",
+        "Javascript",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "title": "Aplicações WEB",
+      "text": "Uma Aplicação Web é a forma mais fácil de criar um ponto de encontro entre seu negócio e seus clientes. A web permite que você entregue valor de forma rápida, sem instalação e em qualquer dispositivo que o usuário consuma seu conteúdo.",
+      "icons": [
+        "React",
+        "Next",
+        "Javascript",
+        "Python",
+        "AWS"
       ]
     },
     {
