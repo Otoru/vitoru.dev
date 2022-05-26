@@ -3,7 +3,10 @@
   "cards": [
     {
       "title": "Aplicações WEB",
-      "text": "Uma Aplicação Web é a forma mais fácil de criar um ponto de encontro entre seu negócio e seus clientes. A web permite que você entregue valor de forma rápida, sem instalação e em qualquer dispositivo que o usuário consuma seu conteúdo.",
+      "text": [
+        "Uma Aplicação Web é a forma mais fácil de criar um ponto de encontro entre seu negócio e seus clientes.",
+        "A web permite que você entregue valor de forma rápida, sem instalação e em qualquer dispositivo que o usuário consuma seu conteúdo."
+      ],
       "icons": [
         "React",
         "Next",
@@ -14,43 +17,44 @@
     },
     {
       "title": "Automação de processos",
-      "text": "Usar tecnologia para tornar operacional um processo que antes era executado manualmente pode dar muita agilidade a sua empresa. Ajudamos você a fazer isso usando as ferramentas de integração mais adequadas para seu negócio.",
+      "text": [
+        "Usar tecnologia para tornar operacional um processo que antes era executado manualmente pode dar muita agilidade a sua empresa.",
+        "Ajudamos você a fazer isso usando as ferramentas de integração mais adequadas para seu ambiente de trabalho."
+      ],
       "icons": [
         "Python",
+        "Git",
+        "Ansible",
         "Bash"
       ]
     },
     {
-      "title": "Aplicações WEB",
-      "text": "Uma Aplicação Web é a forma mais fácil de criar um ponto de encontro entre seu negócio e seus clientes. A web permite que você entregue valor de forma rápida, sem instalação e em qualquer dispositivo que o usuário consuma seu conteúdo.",
+      "title": "CI/CD",
+      "text": [
+        "Aceleramos o processo de entrega do seu produto aplicando as melhores práticas do processo de integração contínua.",
+        "Seguindo nessa linha, ajudamos a você a definir sua esteira de entrega e na sequência automatiza-lá."
+      ],
       "icons": [
-        "React",
-        "Next",
-        "Javascript",
-        "Python",
+        "Github",
+        "Gitlab",
+        "Bitbucket",
+        "Terraform",
+        "Ansible",
+        "Kubernetes",
         "AWS"
       ]
     },
     {
-      "title": "Aplicações WEB",
-      "text": "Uma Aplicação Web é a forma mais fácil de criar um ponto de encontro entre seu negócio e seus clientes. A web permite que você entregue valor de forma rápida, sem instalação e em qualquer dispositivo que o usuário consuma seu conteúdo.",
+      "title": "Administração de sistemas",
+      "text": [
+        "Gerenciar ambientes linux pode ser uma tarefa muito complexa, mas nós podemos te ajudar nisso.",
+        "Ajudamos você a monitorar todos os seus hosts e também a definir o melhor plano de ação para casos de desastre."
+      ],
       "icons": [
-        "React",
-        "Next",
-        "Javascript",
-        "Python",
-        "AWS"
-      ]
-    },
-    {
-      "title": "Aplicações WEB",
-      "text": "Uma Aplicação Web é a forma mais fácil de criar um ponto de encontro entre seu negócio e seus clientes. A web permite que você entregue valor de forma rápida, sem instalação e em qualquer dispositivo que o usuário consuma seu conteúdo.",
-      "icons": [
-        "React",
-        "Next",
-        "Javascript",
-        "Python",
-        "AWS"
+        "Ubuntu",
+        "Debian",
+        "Centos",
+        "Arch"
       ]
     }
   ]

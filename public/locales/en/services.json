@@ -1,9 +1,12 @@
 {
-  "head": "Vitoru · Services",
+  "head": "Vitoru · Serviços",
   "cards": [
     {
       "title": "Web Apps",
-      "text": "A Web Application is the easiest way to create a meeting point between your business and your customers. The internet allows you to deliver value immediately, without installation and on whatever device the user consumes your content.",
+      "text": [
+        "A Web Application is the easiest way to create a meeting point between your business and your customers.",
+        "The web allows you to deliver value quickly, without installation, and on whatever device the user consumes your content."
+      ],
       "icons": [
         "React",
         "Next",
@@ -14,43 +17,44 @@
     },
     {
       "title": "Process automation",
-      "text": "Using technology to make operational a process that was previously performed manually can give your company a lot of agility. We help you do this using the integration tools best suited for your business.",
+      "text": [
+        "Using technology to make operational a process that was previously performed manually can give your company a lot of agility.",
+        "We help you do this using the integration tools best suited to your work environment."
+      ],
       "icons": [
         "Python",
+        "Git",
+        "Ansible",
         "Bash"
       ]
     },
     {
-      "title": "Web Apps",
-      "text": "A Web Application is the easiest way to create a meeting point between your business and your customers. The internet allows you to deliver value immediately, without installation and on whatever device the user consumes your content.",
+      "title": "CI/CD",
+      "text": [
+        "We accelerate your product delivery process by applying the best practices of the continuous integration process.",
+        "Following this line, we help you to define your delivery pipeline and then automate it."
+      ],
       "icons": [
-        "React",
-        "Next",
-        "Javascript",
-        "Python",
+        "Github",
+        "Gitlab",
+        "Bitbucket",
+        "Terraform",
+        "Ansible",
+        "Kubernetes",
         "AWS"
       ]
     },
     {
-      "title": "Web Apps",
-      "text": "A Web Application is the easiest way to create a meeting point between your business and your customers. The internet allows you to deliver value immediately, without installation and on whatever device the user consumes your content.",
+      "title": "Systems administration",
+      "text": [
+        "Managing linux environments can be a very complex task, but we can help you with that.",
+        "We help you to monitor all your hosts and also to define the best plan of action in case of disaster."
+      ],
       "icons": [
-        "React",
-        "Next",
-        "Javascript",
-        "Python",
-        "AWS"
-      ]
-    },
-    {
-      "title": "Web Apps",
-      "text": "A Web Application is the easiest way to create a meeting point between your business and your customers. The internet allows you to deliver value immediately, without installation and on whatever device the user consumes your content.",
-      "icons": [
-        "React",
-        "Next",
-        "Javascript",
-        "Python",
-        "AWS"
+        "Ubuntu",
+        "Debian",
+        "Centos",
+        "Arch"
       ]
     }
   ]
