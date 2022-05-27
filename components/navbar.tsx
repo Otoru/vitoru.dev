@@ -6,7 +6,6 @@ import {
   Text,
   Menu,
   Stack,
-  Image,
   Button,
   Drawer,
   HStack,
@@ -43,6 +42,8 @@ import { IconType } from 'react-icons'
 import NextLink from 'next/link'
 import React from 'react'
 
+import { Brand } from 'components'
+
 interface Item {
   key: string
   icon: IconType
@@ -75,18 +76,6 @@ const menu: Array<Item> = [
     href: '/contact',
   },
 ]
-
-const Brand: React.FC = () => {
-  const text = useColorModeValue('gray.600', 'gray.200')
-  return (
-    <HStack>
-      <Image h={10} aria-label="logo" src={'/logo.png'} />
-      <Heading fontFamily={'Maven Pro'} color={text} size={'md'}>
-        vitoru.dev
-      </Heading>
-    </HStack>
-  )
-}
 
 const Navbar: React.FC<Props> = ({ locale }) => {
   const gray = useColorModeValue('gray.200', 'gray.600')
