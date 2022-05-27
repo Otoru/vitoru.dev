@@ -4,13 +4,15 @@ import {
   Flex,
   Text,
   Stack,
+  Image,
+  Spacer,
   HStack,
   Tooltip,
   Heading,
-  useColorModeValue,
-  Container,
   GridItem,
-  Spacer,
+  Container,
+  useColorMode,
+  useColorModeValue,
 } from '@chakra-ui/react'
 import {
   FaAws as AwsIcon,
@@ -42,7 +44,7 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import React from 'react'
 
-import { Navbar } from 'components'
+import { Navbar, Footer } from 'components'
 
 interface CardProps {
   title: string
@@ -173,6 +175,7 @@ const Card: React.FC<CardProps> = ({ title, icons, text }) => {
 
 const Services: NextPage = () => {
   const { t } = useTranslation('services')
+  const { colorMode } = useColorMode()
   const { locale } = useRouter()
 
   const cards: Array<CardProps> = t('cards', { returnObjects: true })
@@ -184,20 +187,42 @@ const Services: NextPage = () => {
       </Head>
       <Navbar locale={locale} />
       <main>
-        <Container maxW={['container.sm', 'container.md']} py={4}>
-          <Grid
-            gap={[4, 6]}
-            m={'auto'}
-            templateColumns={'repeat(auto-fit, minmax(20rem, 1fr));'}
-          >
-            {cards.map(({ title, text, icons }, index) => (
-              <GridItem key={index}>
-                <Card title={title} text={text} icons={icons} />
-              </GridItem>
-            ))}
-          </Grid>
+        <Container maxW={['container.sm', 'container.md']} p={4}>
+          <Stack spacing={16} paddingTop={16}>
+            <Image
+              m={'auto'}
+              alt="pair programming log"
+              boxSize={['256px', '256px', '384px']}
+              src={`/assets/${colorMode}/dev-producity.svg`}
+            />
+            <Stack spacing={6}>
+              <Heading
+                textAlign={'center'}
+                color={useColorModeValue('blue.700', 'blue.100')}
+              >
+                Lorem Ipsum
+              </Heading>
+              <Text textAlign={'center'}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                mollis sem at porttitor egestas. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra.
+              </Text>
+            </Stack>
+            <Grid
+              gap={4}
+              m={'auto'}
+              templateColumns={'repeat(auto-fit, minmax(20rem, 1fr));'}
+            >
+              {cards.map(({ title, text, icons }, index) => (
+                <GridItem key={index}>
+                  <Card title={title} text={text} icons={icons} />
+                </GridItem>
+              ))}
+            </Grid>
+          </Stack>
         </Container>
       </main>
+      <Footer />
     </div>
   )
 }
