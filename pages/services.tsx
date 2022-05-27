@@ -178,7 +178,7 @@ const Services: NextPage = () => {
   const { colorMode } = useColorMode()
   const { locale } = useRouter()
 
-  const cards: Array<CardProps> = t('cards', { returnObjects: true })
+  const services: Array<CardProps> = t('services', { returnObjects: true })
 
   return (
     <div>
@@ -188,7 +188,7 @@ const Services: NextPage = () => {
       <Navbar locale={locale} />
       <main>
         <Container maxW={['container.sm', 'container.md']} p={4}>
-          <Stack spacing={16} paddingTop={16}>
+          <Stack spacing={12} paddingTop={12}>
             <Image
               m={'auto'}
               alt="pair programming log"
@@ -200,25 +200,27 @@ const Services: NextPage = () => {
                 textAlign={'center'}
                 color={useColorModeValue('blue.700', 'blue.100')}
               >
-                Lorem Ipsum
+                {t('title')}
               </Heading>
-              <Text textAlign={'center'}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                mollis sem at porttitor egestas. Class aptent taciti sociosqu ad
-                litora torquent per conubia nostra.
-              </Text>
+              <Text textAlign={'center'}>{t('description')}</Text>
             </Stack>
             <Grid
               gap={4}
               m={'auto'}
               templateColumns={'repeat(auto-fit, minmax(20rem, 1fr));'}
             >
-              {cards.map(({ title, text, icons }, index) => (
+              {services.map(({ title, text, icons }, index) => (
                 <GridItem key={index}>
                   <Card title={title} text={text} icons={icons} />
                 </GridItem>
               ))}
             </Grid>
+            <Stack spacing={6}>
+              <Heading color={useColorModeValue('blue.700', 'blue.100')}>
+                {t('subtitle')}
+              </Heading>
+              <Text>{t('call-to-action')}</Text>
+            </Stack>
           </Stack>
         </Container>
       </main>
