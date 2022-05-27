@@ -4,6 +4,7 @@ import {
   Image,
   Stack,
   Heading,
+  Container,
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react'
@@ -27,25 +28,27 @@ const Home: NextPage = () => {
       </Head>
       <Navbar locale={locale} />
       <main>
-        <Stack align={'center'} py={16}>
-          <Image
-            src={`/assets/${colorMode}/pair-programming.svg`}
-            alt="pair programming log"
-            boxSize={['256px', '256px', '512px']}
-          />
-          <Heading fontWeight={'black'} display={'flex'} fontFamily={'Lato'}>
-            {t('title')}{' '}
-            <Box
-              paddingLeft={2}
-              color={useColorModeValue('blue.600', 'blue.200')}
-            >
-              software
-            </Box>
-          </Heading>
-          <Text fontWeight={'light'} align={'center'} p={8}>
-            {t('description')}
-          </Text>
-        </Stack>
+        <Container>
+          <Stack align={'center'} py={16}>
+            <Image
+              alt="pair programming log"
+              boxSize={['256px', '384px', '512px']}
+              src={`/assets/${colorMode}/pair-programming.svg`}
+            />
+            <Heading fontWeight={'black'} display={'flex'} fontFamily={'Lato'}>
+              {t('title')}{' '}
+              <Box
+                paddingLeft={2}
+                color={useColorModeValue('blue.600', 'blue.200')}
+              >
+                software
+              </Box>
+            </Heading>
+            <Text fontWeight={'light'} align={'center'} p={8}>
+              {t('description')}
+            </Text>
+          </Stack>
+        </Container>
       </main>
     </div>
   )
