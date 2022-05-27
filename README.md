@@ -12,7 +12,9 @@ Os assets do projeto são todos retirados do projeto [undraw.co](https://undraw.
 
 ## Internacionalização
 
-O site é internacionalizado usando `next-i18next` e os aquivos de tradução podem ser encontrados em `public/locales/`.
+O site é internacionalizado usando `next-i18next`.
+
+Os aquivos de tradução podem ser encontrados em `public/locales/`.
 
 ## Licença
 
