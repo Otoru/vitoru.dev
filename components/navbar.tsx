@@ -78,6 +78,11 @@ const menu: Array<Item> = [
 ]
 
 const Navbar: React.FC<Props> = ({ locale }) => {
+  const background = useColorModeValue(
+    'whiteAlpha.800',
+    'rgba(26, 32, 44, 0.9)',
+  )
+  const blue = useColorModeValue('blue.600', 'blue.200')
   const gray = useColorModeValue('gray.200', 'gray.600')
   const { colorMode, toggleColorMode } = useColorMode()
   const { isOpen, onToggle, onClose } = useDisclosure()
@@ -86,7 +91,7 @@ const Navbar: React.FC<Props> = ({ locale }) => {
 
   return (
     <header>
-      <Box>
+      <Box position={'fixed'} w={'100%'} bg={background} zIndex={'banner'}>
         <Flex
           px={4}
           minH={'64px'}
@@ -112,7 +117,7 @@ const Navbar: React.FC<Props> = ({ locale }) => {
                     }}
                   >
                     <Tooltip label={description}>
-                      <Button isActive={href === pathname} variant={'ghost'}>
+                      <Button variant={'ghost'} colorScheme={'blue'}>
                         {t(label)}
                       </Button>
                     </Tooltip>
@@ -133,6 +138,7 @@ const Navbar: React.FC<Props> = ({ locale }) => {
                 <MenuButton
                   as={IconButton}
                   variant={'ghost'}
+                  colorScheme={'blue'}
                   icon={<Icon as={Translate} />}
                 />
                 <MenuList py={0}>
@@ -146,6 +152,7 @@ const Navbar: React.FC<Props> = ({ locale }) => {
               </Menu>
               <IconButton
                 variant={'ghost'}
+                colorScheme={'blue'}
                 onClick={toggleColorMode}
                 aria-label={
                   colorMode === 'light' ? 'turn off lights' : 'turn on lights'
@@ -156,6 +163,7 @@ const Navbar: React.FC<Props> = ({ locale }) => {
               />
               <IconButton
                 onClick={onToggle}
+                colorScheme={'blue'}
                 display={{ base: 'flex', md: 'none' }}
                 icon={
                   isOpen ? (
@@ -207,10 +215,14 @@ const Navbar: React.FC<Props> = ({ locale }) => {
                           }}
                         >
                           <Flex>
-                            <Icon as={icon} w={6} h={6} />
+                            <Icon color={blue} as={icon} w={6} h={6} />
                           </Flex>
                           <Box px={2}>
-                            <Heading size={'sm'} fontWeight={'medium'}>
+                            <Heading
+                              size={'sm'}
+                              color={blue}
+                              fontWeight={'medium'}
+                            >
                               {label}
                             </Heading>
                             <Text fontWeight={'light'} fontSize={'xs'}>
@@ -223,7 +235,7 @@ const Navbar: React.FC<Props> = ({ locale }) => {
                   })}
                 </Stack>
               </DrawerBody>
-              <DrawerFooter borderTopWidth={'1px'}>
+              <DrawerFooter color={blue} borderTopWidth={'1px'}>
                 <a href="contato@vitoru.dev">{t('email')}</a>
               </DrawerFooter>
             </DrawerContent>
