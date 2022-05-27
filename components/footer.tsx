@@ -1,10 +1,12 @@
 import { Box, Flex, Text, useColorModeValue } from '@chakra-ui/react'
+import { useTranslation } from 'next-i18next'
 import React from 'react'
 
 import { Brand } from 'components'
 
 const Footer: React.FC = () => {
   const gray = useColorModeValue('blue.300', 'blue.700')
+  const { t } = useTranslation()
   const before = {
     content: '""',
     borderBottom: '1px solid',
@@ -28,7 +30,7 @@ const Footer: React.FC = () => {
           <Brand />
         </Flex>
         <Text pt={6} fontSize={'sm'} textAlign={'center'}>
-          © 2022 Vitoru LTDA. All rights reserved
+          © 2022 Vitoru LTDA. {t('license')}
         </Text>
       </Box>
     </footer>
