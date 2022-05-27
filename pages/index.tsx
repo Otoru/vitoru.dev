@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       </Head>
       <Navbar locale={locale} />
       <main>
-        <Container>
+        <Container maxW={['container.sm', 'container.md']}>
           <Stack align={'center'} py={16}>
             <Image
               alt="pair programming log"
