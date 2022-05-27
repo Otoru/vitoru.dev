@@ -1,6 +1,8 @@
 {
   "head": "Vitoru · Serviços",
-  "cards": [
+  "title": "Service catalog",
+  "description": "From discovery to development, our team works to create the best digital products.",
+  "services": [
     {
       "title": "Web Apps",
       "text": [
@@ -57,5 +59,7 @@
         "Arch"
       ]
     }
-  ]
+  ],
+  "subtitle": "Need more?",
+  "call-to-action": "We love new challenges and will be happy to work with you. Let's talk to better understand your demand or idea and see how we can create something bespoke."
 }
