@@ -47,10 +47,10 @@
       ]
     },
     {
-      "title": "Administração de sistemas",
+      "title": "Monitoramento de servidores",
       "text": [
-        "Gerenciar ambientes linux pode ser uma tarefa muito complexa, mas nós podemos te ajudar nisso.",
-        "Ajudamos você a monitorar todos os seus hosts e também a definir o melhor plano de ação para casos de desastre."
+        "Monitorar ambientes linux pode ser uma tarefa muito complexa, mas nós podemos te ajudar nisso.",
+        "Ajudamos você a garantir saúde de seus hosts e também a definir o melhor plano de ação para casos de desastre."
       ],
       "icons": [
         "Ubuntu",

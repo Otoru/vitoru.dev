@@ -1,3 +1,9 @@
 {
-  "head": "Vitoru · Contato"
+  "head": "Vitoru · Contato",
+  "title": "Vamos trabalhar juntos",
+  "description": [
+    "Entre em contato com a gente e vamos bater um papo.",
+    "Seja para entender melhor o que fazemos, falar sobre um desafio da sua empresa ou até para já solicitar um orçamento, nós estamos aqui."
+  ],
+  "email": "contato@vitoru.dev"
 }

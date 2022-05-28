@@ -1,3 +1,9 @@
 {
-  "head": "Vitoru · Contact"
+  "head": "Vitoru · Contact",
+  "title": "Let's work together",
+  "description": [
+    "Contact us and let's chat.",
+    "Whether to better understand what we do, talk about a challenge for your company or even to request a quote, we are here."
+  ],
+  "email": "contact@vitoru.dev"
 }

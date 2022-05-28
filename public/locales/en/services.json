@@ -47,10 +47,10 @@
       ]
     },
     {
-      "title": "Systems administration",
+      "title": "Server monitoring",
       "text": [
-        "Managing linux environments can be a very complex task, but we can help you with that.",
-        "We help you to monitor all your hosts and also to define the best plan of action in case of disaster."
+        "Monitoring linux environments can be a very complex task, but we can help you with that.",
+        "We help you to ensure the health of your hosts and also to define the best action plan in case of disaster."
       ],
       "icons": [
         "Ubuntu",
