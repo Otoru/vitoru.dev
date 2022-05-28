@@ -33,7 +33,6 @@ import {
   FaTools as Tools,
   FaTimes as Close,
   FaMailBulk as Mail,
-  FaInfoCircle as Info,
 } from 'react-icons/fa'
 import { BsTranslate as Translate } from 'react-icons/bs'
 import { useTranslation } from 'next-i18next'
@@ -64,11 +63,6 @@ const menu: Array<Item> = [
     key: 'services',
     icon: Tools,
     href: '/services',
-  },
-  {
-    key: 'about',
-    icon: Info,
-    href: '/info',
   },
   {
     key: 'contact',
@@ -236,7 +230,7 @@ const Navbar: React.FC<Props> = ({ locale }) => {
                 </Stack>
               </DrawerBody>
               <DrawerFooter color={blue} borderTopWidth={'1px'}>
-                <a href="contato@vitoru.dev">{t('email')}</a>
+                <a href={`mailto:${t('email')}`}>{t('email')}</a>
               </DrawerFooter>
             </DrawerContent>
           </DrawerOverlay>
