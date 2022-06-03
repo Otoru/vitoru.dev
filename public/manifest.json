@@ -1,6 +1,7 @@
 {
-  "name": "vitoru.dev",
+  "name": "Vitoru",
   "short_name": "vitoru",
+  "description": "We make software",
   "start_url": "/",
   "display": "standalone",
   "icons": [
