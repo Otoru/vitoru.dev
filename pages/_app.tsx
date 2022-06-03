@@ -3,6 +3,10 @@ import { ChakraProvider } from 'lib/chakra'
 import type { AppProps } from 'next/app'
 import React, { useEffect } from 'react'
 
+import '@fontsource/maven-pro'
+import '@fontsource/poppins'
+import '@fontsource/lato'
+
 import theme from 'theme'
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
