@@ -25,15 +25,6 @@ import {
   DrawerCloseButton,
   useColorModeValue,
 } from '@chakra-ui/react'
-import {
-  FaSun as Sun,
-  FaMoon as Moon,
-  FaHome as Home,
-  FaBars as Bars,
-  FaTools as Tools,
-  FaTimes as Close,
-  FaMailBulk as Mail,
-} from 'react-icons/fa'
 import { BsTranslate as Translate } from 'react-icons/bs'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
@@ -41,6 +32,7 @@ import { IconType } from 'react-icons'
 import NextLink from 'next/link'
 import React from 'react'
 
+import { Sun, Mail, Moon, Home, Bars, Tools, Close } from 'lib/icons'
 import { Brand } from 'components'
 
 interface Item {

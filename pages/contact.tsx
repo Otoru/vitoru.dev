@@ -1,6 +1,7 @@
 import {
   Box,
   Text,
+  Icon,
   Stack,
   Image,
   Button,
@@ -10,13 +11,13 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { MdEmail as EmailIcon } from 'react-icons/md'
 import type { GetStaticProps, NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 
 import { Navbar, Footer } from 'components'
+import { Email } from 'lib/icons'
 
 const Contact: NextPage = () => {
   const { t } = useTranslation('contact')
@@ -54,7 +55,7 @@ const Contact: NextPage = () => {
             </Stack>
             <Box margin={'auto'} py={8}>
               <a href={`mailto:${t('email')}`}>
-                <Button leftIcon={<EmailIcon />} colorScheme={'blue'}>
+                <Button leftIcon={<Icon as={Email} />} colorScheme={'blue'}>
                   {t('email')}
                 </Button>
               </a>

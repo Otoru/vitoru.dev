@@ -14,30 +14,7 @@ import {
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react'
-import {
-  FaAws as AwsIcon,
-  FaGitAlt as GitIcon,
-  FaReact as ReactIcon,
-  FaCentos as CentosIcon,
-  FaGithub as GithubIcon,
-  FaPython as PythonIcon,
-  FaDocker as DockerIcon,
-  FaQuestion as QuestionIcon,
-  FaBitbucket as BitbucketIcon,
-} from 'react-icons/fa'
-import {
-  SiGnubash as BashIcon,
-  SiDebian as DebianIcon,
-  SiUbuntu as UbuntuIcon,
-  SiGitlab as GitlabIcon,
-  SiArchlinux as ArchIcon,
-  SiNextdotjs as NextIcon,
-  SiAnsible as AnsibleIcon,
-  SiTerraform as TerraformIcon,
-  SiKubernetes as KubernetesIcon,
-} from 'react-icons/si'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { IoLogoJavascript as JavascriptIcon } from 'react-icons/io'
 import type { GetStaticProps, NextPage } from 'next'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
@@ -45,6 +22,7 @@ import Head from 'next/head'
 import React from 'react'
 
 import { Navbar, Footer } from 'components'
+import * as icons from 'lib/icons'
 
 interface CardProps {
   title: string
@@ -59,61 +37,61 @@ const tagMaker = ({
 }): { icon: React.ElementType; color: string } => {
   switch (tag) {
     case 'Python': {
-      return { color: 'blue', icon: PythonIcon }
+      return { color: 'blue', icon: icons.Python }
     }
     case 'React': {
-      return { color: 'cyan', icon: ReactIcon }
+      return { color: 'cyan', icon: icons.React }
     }
     case 'Next': {
-      return { color: 'green', icon: NextIcon }
+      return { color: 'green', icon: icons.Next }
     }
     case 'Javascript': {
-      return { color: 'yellow', icon: JavascriptIcon }
+      return { color: 'yellow', icon: icons.Javascript }
     }
     case 'AWS': {
-      return { color: 'orange', icon: AwsIcon }
+      return { color: 'orange', icon: icons.Aws }
     }
     case 'Ansible': {
-      return { color: 'red', icon: AnsibleIcon }
+      return { color: 'red', icon: icons.Ansible }
     }
     case 'Bitbucket': {
-      return { color: 'blue', icon: BitbucketIcon }
+      return { color: 'blue', icon: icons.Bitbucket }
     }
     case 'Docker': {
-      return { color: 'blue', icon: DockerIcon }
+      return { color: 'blue', icon: icons.Docker }
     }
     case 'Git': {
-      return { color: 'orange', icon: GitIcon }
+      return { color: 'orange', icon: icons.Git }
     }
     case 'Github': {
-      return { color: 'gray', icon: GithubIcon }
+      return { color: 'gray', icon: icons.Github }
     }
     case 'Bash': {
-      return { color: 'pink', icon: BashIcon }
+      return { color: 'pink', icon: icons.Bash }
     }
     case 'Terraform': {
-      return { color: 'purple', icon: TerraformIcon }
+      return { color: 'purple', icon: icons.Terraform }
     }
     case 'Gitlab': {
-      return { color: 'orange', icon: GitlabIcon }
+      return { color: 'orange', icon: icons.Gitlab }
     }
     case 'Kubernetes': {
-      return { color: 'blue', icon: KubernetesIcon }
+      return { color: 'blue', icon: icons.Kubernetes }
     }
     case 'Ubuntu': {
-      return { color: 'orange', icon: UbuntuIcon }
+      return { color: 'orange', icon: icons.Ubuntu }
     }
     case 'Debian': {
-      return { color: 'pink', icon: DebianIcon }
+      return { color: 'pink', icon: icons.Debian }
     }
     case 'Centos': {
-      return { color: 'green', icon: CentosIcon }
+      return { color: 'green', icon: icons.Centos }
     }
     case 'Arch': {
-      return { color: 'blue', icon: ArchIcon }
+      return { color: 'blue', icon: icons.Arch }
     }
     default: {
-      return { color: 'yellow', icon: QuestionIcon }
+      return { color: 'yellow', icon: icons.Question }
     }
   }
 }
